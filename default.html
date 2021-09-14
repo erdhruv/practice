@@ -18,7 +18,7 @@
         }
         slogan()
         {
-            return 'Hi My name is $(this.name) my experience is $(this.experience) years and division - $(this.division)'
+            return `\nHi My name is ${this.name} my experience is ${this.experience} years and division - ${this.division}\n`;
         }
     }
     class Programmer extends Employee
@@ -29,21 +29,26 @@
             this.lang = language;
             this.gith = github;
         }
-        static favoriteLanguage()
+        favoriteLanguage()
         {
             if(this.lang == "Python")
             {
-                return 'Python'
+                return 'Python\n'
             }
             else
             {
-                return 'Java Script'
+                return 'JavaScript\n'
             }
         }
     }
 
     myObj = new Programmer('Sparsh', 12, 1, 'Python', 'yes')
-    console.log(myObj)
+    document.write(myObj.favoriteLanguage())
+    document.write("<br>")
+    console.log(myObj.favoriteLanguage())
+
+    document.write(myObj.slogan())
+    console.log(myObj.slogan());
     </script>
 </head>
 <body>
